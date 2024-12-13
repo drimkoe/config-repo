@@ -1,15 +1,32 @@
+server:  
+  port: 8888  
+
 spring:  
+  application:  
+    name: config-server
+  cloud:  
+    config:  
+      server:  
+        git:  
+          uri: https://github.com/drimkoe/config-repo  
+          clone-on-start: true
   profiles:  
     active: dev  
+
+---
+
 spring:  
   profiles: dev  
   datasource:  
     url: jdbc:mysql://localhost:3306/devdb  
     username: devuser  
     password: devpass  
+
+---
+
 spring:  
   profiles: prod  
   datasource:  
     url: jdbc:mysql://localhost:3306/proddb  
     username: produser  
-    password: prodpass 
+    password: prodpass
