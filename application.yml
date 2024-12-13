@@ -10,27 +10,3 @@ spring:
         git:  
           uri: https://github.com/drimkoe/config-repo  
           clone-on-start: true
-  profiles:  
-    active: dev  
-
----
-
-spring:  
-  config:  
-    activate:  
-      on-profile: dev  
-  datasource:  
-    url: jdbc:mysql://localhost:3306/devdb  
-    username: devuser  
-    password: devpass  
-
----
-
-spring:  
-  config:  
-    activate:  
-      on-profile: prod  
-  datasource:  
-    url: jdbc:mysql://localhost:3306/proddb  
-    username: produser  
-    password: prodpass
