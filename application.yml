@@ -16,7 +16,9 @@ spring:
 ---
 
 spring:  
-  profiles: dev  
+  config:  
+    activate:  
+      on-profile: dev  
   datasource:  
     url: jdbc:mysql://localhost:3306/devdb  
     username: devuser  
@@ -25,7 +27,9 @@ spring:
 ---
 
 spring:  
-  profiles: prod  
+  config:  
+    activate:  
+      on-profile: prod  
   datasource:  
     url: jdbc:mysql://localhost:3306/proddb  
     username: produser  
